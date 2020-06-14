@@ -34,3 +34,7 @@ compiler.c.elf.extra_flags=-Wl,--relax
 
 - Open `Marlin-2.0.5.3\Marlin\Marlin.ino` file project and select the proper `Anet V1.0` board definition for compiling
 - Click on `Verify` to start compiling Marlin firmware (it should take some time, don't worry)
+
+## Addons
+
+If you really need to dive in into Marlin's configuration, [here is the official documentation](https://marlinfw.org/docs/configuration/configuration.html)
