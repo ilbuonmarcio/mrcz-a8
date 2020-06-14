@@ -20,7 +20,15 @@
 - Copy Anet A8's board definition `adr` you can find under `anet-board-repo-folder/hardware` to the `Arduino/hardware` system application folder
   (on Windows should be `C:\Program Files (x86)\Arduino\hardware`)
 - Run Arduino IDE and go to Tools -> Board and set `Anet V1.0` as your board definition for code compilation
-- Copy the board configuration files from `Configurations-2.0.5.3\config\examples\Anet\A8` to `Marlin-2.0.5.3\Marlin` and override existing configuration files if asked to do so
+- Copy all the board configuration files from `Configurations-2.0.5.3\config\examples\Anet\A8` to `Marlin-2.0.5.3\Marlin` and override existing configuration files if asked to do so
+- Open `C:\Program Files (x86)\Arduino\hardware\anet\avr\platform.local.txt` compile configuration file and add the following entries:
+
+```
+compiler.c.extra_flags=-fno-tree-scev-cprop -fno-split-wide-types -Wl,--relax -mcall-prologues
+compiler.cpp.extra_flags=-fno-tree-scev-cprop -fno-split-wide-types -Wl,--relax -mcall-prologues
+compiler.c.elf.extra_flags=-Wl,--relax
+```
+
 
 ## Building Marlin for Anet A8
 
